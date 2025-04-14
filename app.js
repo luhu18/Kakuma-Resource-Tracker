@@ -9,3 +9,12 @@ const filterbutton = document.querySelectorAll(".filter-btn");
 let resources =JSON.parse(localStorage.getItem("resources"));
 let currentfilter = "all";
 let searchTerm = "";
+
+// initializing javascript to operate on the DOM
+
+function init() {
+    // Check if resources exist in local storage
+    renderREsources();
+    bindEvents();
+    updateCounter();
+}
